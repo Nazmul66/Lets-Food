@@ -1,0 +1,25 @@
+.error-bg{
+    position: relative;
+    background: url("../../../src/assets/404.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.error-bg::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
+}
+.btnz{
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 6px;
+    font-weight: 600;
+    background: linear-gradient(45deg,#2193b0 100%, #6dd5ed 100%);
+}
