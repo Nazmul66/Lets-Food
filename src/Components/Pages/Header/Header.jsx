@@ -7,7 +7,7 @@ import { BiLogIn } from "react-icons/bi";
 
 const Header = () => {
     return (
-        <header className='py-6'>
+        <header className='py-6 bg-[#FFF9EA]'>
            <div className='flex items-center justify-between max-w-[1140px] mx-auto'>
                <div className='flex items-center logo'>
                   <h2>Let’sFood</h2>
