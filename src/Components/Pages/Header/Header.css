@@ -1,0 +1,39 @@
+.logo h2{
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--black);
+    margin-right: 5px;
+}
+nav ul li a{
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(29, 29, 29, 0.7);
+    margin: 0 12px;
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--yellow);
+    left: 0;
+    bottom: -10px;
+    transition: all 0.2s ease-in-out;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+nav ul li a:hover{
+    color: var(--black);
+}
+.btn-login{
+    background: #FFCB45;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--black);
+    padding: 10px 24px;
+}
