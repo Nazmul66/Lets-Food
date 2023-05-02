@@ -6,10 +6,10 @@ import { FaFacebookF } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className='py-[100px] bg-[#FFF9EA] mt-20'>
+        <footer className='py-[100px] bg-[#FFF9EA]'>
             <div className='max-w-[1140px] mx-auto title'>
                 <div className='flex lg:flex-row flex-col justify-between gap-5 '>
-                    <div className='lg:w-1/4 w-full desc '>
+                    <div className='lg:w-[30%] w-full desc '>
                             <div className='flex items-center logo mb-6 justify-center lg:justify-normal'>
                                 <h2 >Let’sFood</h2>
                                 <img src={logo} alt="" className='mt-[-12px]' />
@@ -28,7 +28,7 @@ const Footer = () => {
                             </ul>
                     </div>
 
-                    <div className='content-link lg:w-1/4 w-full text-center lg:text-left'>
+                    <div className='content-link lg:w-[20%] w-full text-center lg:text-left'>
                         <h4>Company</h4>
                         <ul className='flex'>
                                 <li>
@@ -43,7 +43,7 @@ const Footer = () => {
                             </ul>
                     </div>
 
-                    <div className='content-link lg:w-1/4 w-full text-center lg:text-left'>
+                    <div className='content-link lg:w-[20%] w-full text-center lg:text-left'>
                         <h4>Policy</h4>
                         <ul className='flex'>
                                 <li>
@@ -58,7 +58,7 @@ const Footer = () => {
                             </ul>
                     </div>
 
-                    <div className='content-link lg:w-1/4 w-full text-center lg:text-left'>
+                    <div className='content-link lg:w-[30%] w-full text-center lg:text-left'>
                         <h4>Get In Touch</h4>
                         <ul className='flex'>
                                 <li>
