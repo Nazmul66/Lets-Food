@@ -1,0 +1,66 @@
+.logo h2{
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black);
+    margin-right: 5px;
+}
+.desc p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(29, 29, 29, 0.7);
+    margin-bottom: 32px;
+    text-align: left ;
+}
+.desc ul li{
+    margin-right: 20px;
+}
+.desc ul li a{
+    display: flex;
+    box-shadow: 0px 4px 12px rgba(29, 29, 29, 0.15);
+    border-radius: 31px;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    transition: al 0.3s ease-in-out;
+}
+.desc ul li a:hover{
+    background-color: #FFCB45;
+}
+
+.content-link h4{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;   
+    color: #1D1D1D; 
+    margin-bottom: 30px;
+}
+.content-link ul{
+    display: block;
+}
+.content-link ul li{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(29, 29, 29, 0.7); 
+    margin-bottom: 20px;
+}
+hr{
+    border: 1px solid rgba(29, 29, 29, 0.5);
+    margin: 46px 0;
+}
+.title .credit{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1D1D1D;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 576px){
+.desc p{
+    text-align: center ;
+  }
+
+}
