@@ -1,0 +1,19 @@
+.service-info {
+    text-align: center;
+    padding: 20px;
+}
+.service-info h4{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    color: #1D1D1D;
+    margin-bottom: 15px;
+}
+.service-info p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(29, 29, 29, 0.7);
+    padding: 0 45px;
+}
+

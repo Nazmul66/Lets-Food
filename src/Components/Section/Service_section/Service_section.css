@@ -27,3 +27,13 @@
     color: rgba(29, 29, 29, 0.7);
     margin-bottom: 16px;
 }
+
+
+@media (min-width: 320px) and (max-width: 576px){
+   .service-content p {
+        width: 100%;
+    }
+}
+
+
+  

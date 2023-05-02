@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Service_section.css"
+import Service from './service/service';
 
 const Service_section = () => {
     const [data, setData] = useState([]);
@@ -9,19 +10,22 @@ const Service_section = () => {
         .then(res => res.json())
         .then(del => setData(del))
     }, [])
-    console.log(data)
+    // console.log(data)
     return (
-        <section className='lg:py-10'>
-           <div className='max-w-[1140px] mx-auto'>
+        <section className='lg:py-10 lg:px-0 px-7 py-10'>
+           <div className='max-w-[1040px] mx-auto'>
               <div className='service-content'>
                     <h5>How it works</h5>
                     <h3>What We Serve</h3>
                     <p>Product Quality Is Our Priority, And Always Guarantees Halal And Safety Until It Is In Your Hands.</p>
               </div>
 
-              <div className='flex justify-between gap-4'>
+              <div className='flex lg:flex-row flex-col justify-between gap-4'>
                  {
-                    data.map(services => <p key={services.id}>{services.img}</p>)
+                    data.map(services => <Service 
+                     key={services.id}
+                     services={services} 
+                     ></Service>)
                  }
               </div>
            </div>
