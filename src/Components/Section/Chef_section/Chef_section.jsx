@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './Chef_section.css'
 import Chef_card from './Chef_card/Chef_card';
+import { useNavigation } from 'react-router-dom';
+import Loader from '../../../Loader';
 
 const Chef_section = () => {
+    const navigation = useNavigation();
+    console.log(navigation.state)
+
+    if(navigation.state === "loading"){
+        return <Loader></Loader>
+    }
+
     const [dataLoad, setDataLoad] = useState([]);
 
     useEffect(() =>{

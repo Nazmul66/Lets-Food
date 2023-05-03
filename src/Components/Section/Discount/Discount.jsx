@@ -6,7 +6,7 @@ const Discount = () => {
     return (
         <div className='lg:py-20 py-10'>
             <div className='discount-section'>
-                <h1>Join our member and get discount up to 50%</h1>
+                <h1>Join our member and get different type of Food Recipe.</h1>
                 <Link to="/register"><button className='btn-register'>Sign Up</button></Link>
            </div>
         </div>

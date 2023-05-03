@@ -26,4 +26,4 @@ const Chef_card = ({ chef }) => {
     );
 };
 
-export default Chef_card;<h2>hello</h2>
+export default Chef_card;

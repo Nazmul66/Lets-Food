@@ -5,6 +5,7 @@ import Discount from '../../Section/Discount/Discount';
 import Chef_section from '../../Section/Chef_section/Chef_section';
 
 const Home = () => {
+
     return (
         <div>
             <Banner_section></Banner_section>

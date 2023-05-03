@@ -1,11 +1,26 @@
 import React from 'react';
 import './Chef_info.css'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import { AiOutlineLike } from 'react-icons/ai';
 import Recipe_card from '../Recipe_card/Recipe_card';
+import { Circles } from  'react-loader-spinner'
 
 const Chef_info = () => {
     const data = useLoaderData();
+    const navigation = useNavigation();
+
+    if(navigation.state === "loading"){
+        return <Circles
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
+    }
+    
     const { chefPictureUrl, chefName, description, likes, Numbers_of_recipes, Years_of_experience, recipes} = data;
     return (
         <div className='py-20'>
@@ -31,15 +46,18 @@ const Chef_info = () => {
                 </div>
             </div>
 
-             <div className='grid lg:grid-cols-3 grid-cols-1 justify-between gap-5 max-w-[1140px] mx-auto pt-20'>
-                    {
-                    recipes.map(recipe => <Recipe_card
-                        key={recipe.name}
-                        recipe={recipe}
-                        data={data}
-                        ></Recipe_card>)
-                    }
-            </div>
+             <div className='max-w-[1140px] mx-auto pt-20'>
+                <h2 className='text-center lg:text-left lg:text-[36px] text-[32px] text-[#495c0e] font-bold mb-10'>Chef's Recipe are given below :</h2>
+                <div className='grid lg:grid-cols-3 grid-cols-1 justify-between gap-5 '>
+                        {
+                        recipes.map(recipe => <Recipe_card
+                            key={recipe.name}
+                            recipe={recipe}
+                            data={data}
+                            ></Recipe_card>)
+                        }
+                </div>
+             </div>
       </div>
     );
 };

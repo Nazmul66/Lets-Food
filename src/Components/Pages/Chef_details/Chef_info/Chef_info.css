@@ -37,6 +37,7 @@
 @media (min-width:320px) and (max-width: 576px){
     .img_size{
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     .chef-container h1{
