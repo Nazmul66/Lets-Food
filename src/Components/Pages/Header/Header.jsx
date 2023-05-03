@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Header.css'
 import logo from '../../../assets/logo.png'
 import user from '../../../assets/index 1.png'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { BiLogIn } from "react-icons/bi";
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
    const { userInfo , userOut } = useContext(AuthContext);
+   const [act, setAct] = useState("");
 
    const handleLogOut = () =>{
       userOut()
@@ -29,10 +30,10 @@ const Header = () => {
                <nav>
                   <ul className='flex items-center'>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to="/" className={({ isActive }) => isActive ? "text-cyan-500" :  "text-[#1e1e1ec4]"} >Home</NavLink>
                     </li>
                     <li>
-                       <Link to="/blog">Blog</Link>
+                     <NavLink to="/blog" className={({ isActive }) => isActive ? "text-cyan-500" :"text-[#1e1e1ec4]"}>Blog</NavLink>
                     </li>
                   </ul>
                </nav>

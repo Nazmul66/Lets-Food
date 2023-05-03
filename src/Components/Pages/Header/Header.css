@@ -26,7 +26,7 @@ nav ul li a:hover::before{
     width: 100%;
 }
 nav ul li a:hover{
-    color: var(--black);
+    color: #06b6d4 !important;
 }
 .btn-login{
     background: #FFCB45;
