@@ -1,0 +1,32 @@
+.service-content h5{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;  
+    text-align: center;   
+    color: var(--yellow);
+    margin-bottom: 7px; 
+}
+.service-content h3{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 26px; 
+}
+.service-content p{
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(29, 29, 29, 0.7);
+    margin-bottom: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 576px){
+    .service-content p{
+        width: 100%;
+    }
+}

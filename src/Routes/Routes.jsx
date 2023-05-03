@@ -6,7 +6,8 @@ import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import FormField from "../Components/Pages/FormField/FormField";
 import Login from "../Components/Pages/Login/Login";
 import Registration from "../Components/Pages/Registration/Registration";
-
+import Chef_details from "../Components/Pages/Chef_details/Chef_details";
+import Chef_info from "../Components/Pages/Chef_details/Chef_info/Chef_info";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,16 @@ const router = createBrowserRouter([
           path: '/register',
           element: <Registration></Registration>
       }
+      ]
+    },
+    {
+      path:"/",
+      element: <Chef_details></Chef_details>,
+      children: [
+        {
+          path: "/chef/:id",
+          element: <Chef_info></Chef_info> 
+        }
       ]
     }
   ]);

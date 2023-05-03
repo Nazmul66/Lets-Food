@@ -9,6 +9,7 @@ const AuthProvider = ({ children }) => {
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+    // githubProvider.addScope("email");
     const [userInfo, setUserInfo] = useState(null);
 
     // create user
