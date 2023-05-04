@@ -1,14 +1,18 @@
 import React, { useContext, useRef, useState } from 'react';
 import { UserCircleIcon } from '@heroicons/react/24/solid'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
-    const {userInfo , signInUser, googleSignIn, githubSignIn, passwordReset} = useContext(AuthContext);
+    const { signInUser, googleSignIn, githubSignIn, passwordReset} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location)
     const emailRef = useRef();
     const [error, setError] = useState("");
+
+    const from = location.state?.from?.pathname || "/";
 
     // manual login auth
     const handleLogin = (event) =>{
@@ -21,8 +25,8 @@ const Login = () => {
          .then((result) =>{
             const AllUser = result.user;
             console.log(AllUser);
+            navigate(from, { replace : true })
             event.target.reset();
-            navigate("/")
          })
          .catch(error =>{
             setError(error.message)

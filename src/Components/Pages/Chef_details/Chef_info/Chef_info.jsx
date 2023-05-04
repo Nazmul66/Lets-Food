@@ -1,6 +1,6 @@
 import React from 'react';
 import './Chef_info.css'
-import { useLoaderData, useNavigation } from 'react-router-dom';
+import { useLoaderData, useLocation, useNavigation } from 'react-router-dom';
 import { AiOutlineLike } from 'react-icons/ai';
 import Recipe_card from '../Recipe_card/Recipe_card';
 import { Circles } from  'react-loader-spinner'

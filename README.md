@@ -47,16 +47,3 @@ __this website are using many different NPM package that the website create easi
 ## starter template -->
 + Github Repo ---> [let's-Food-starter](https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-Nazmul66)
 
-
-
-
-
-
-
-
-
-
-
-
-## React-Recharts -->
-+ Documentation Link ---> [React-Recharts](https://recharts.org/en-US/)

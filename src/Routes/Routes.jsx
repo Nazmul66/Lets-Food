@@ -8,6 +8,7 @@ import Login from "../Components/Pages/Login/Login";
 import Registration from "../Components/Pages/Registration/Registration";
 import Chef_details from "../Components/Pages/Chef_details/Chef_details";
 import Chef_info from "../Components/Pages/Chef_details/Chef_info/Chef_info";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       children: [
         {
           path: "/chef/:id",
-          element: <Chef_info></Chef_info>,
+          element: <PrivateRoute><Chef_info></Chef_info></PrivateRoute>,
           loader: ({ params }) => fetch(`https://let-s-food-website-server-nazmul66.vercel.app/cheff/${params.id}`), 
         }
       ]
