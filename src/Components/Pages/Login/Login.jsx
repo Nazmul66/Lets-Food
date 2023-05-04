@@ -21,6 +21,10 @@ const Login = () => {
          const pass = event.target.pass.value;
          console.log(email, pass)
 
+         if(email === "" || pass === ""){
+            return setError("!!! Please fill up empty form box !!!");
+         }
+
          signInUser(email, pass)
          .then((result) =>{
             const AllUser = result.user;
@@ -30,7 +34,7 @@ const Login = () => {
          })
          .catch(error =>{
             setError(error.message)
-            setError("Invalid wrong Email or Password");
+            setError("Invalid Email or Password doesn't match");
          })
      }
 
@@ -80,7 +84,7 @@ const Login = () => {
      }
 
     return (
-        <div className='lg:py-20 py-10 lg:px-0 px-6 login_form bg-[#fff9ea]'>
+        <div className='pt-40 lg:pb-10 pb-0 lg:px-0 px-6 login_form bg-[#fff9ea]'>
             <div className="main-container max-w-[500px] mx-auto">
                <div className="lg:p-11 p-5 border-[2px] rounded-lg border-[#0794c9] bg-white">
                     <form action="" onSubmit={ handleLogin }>
@@ -92,7 +96,7 @@ const Login = () => {
                                  ref={emailRef}
                                  name="email"
                                  placeholder='Enter Your Email Adress'
-                                 required className='block w-full outline-none border-[2px] border-[#0794c9] py-2 rounded-lg px-4 text-[16px] font-medium bg-[#f2f2f2] text-[#0794c9]'  />
+                                 className='block w-full outline-none border-[2px] border-[#0794c9] py-2 rounded-lg px-4 text-[16px] font-medium bg-[#f2f2f2] text-[#0794c9]'  />
                             </div>
 
                             <div className='mb-5'>
@@ -100,7 +104,7 @@ const Login = () => {
                                 <input type="password"
                                  name="pass"
                                   placeholder='Enter Your Password'
-                                   className='block w-full outline-none border-[2px] border-[#0794c9] py-2 rounded-lg px-4 text-[16px] font-medium bg-[#f2f2f2] text-[#0794c9]'  required />
+                                   className='block w-full outline-none border-[2px] border-[#0794c9] py-2 rounded-lg px-4 text-[16px] font-medium bg-[#f2f2f2] text-[#0794c9]'  />
                             </div>
 
                             <div className='mb-8 flex flex-col lg:flex-row lg:items-center items-start justify-between'>
@@ -114,6 +118,8 @@ const Login = () => {
                                 <span className='text-[14px] font-semibold text-[#0794c9] underline cursor-pointer' onClick={ handleReset }>Forget Password</span>
                             </div>
 
+                            <p className='text-[16px] text-red-500 font-bold text-center my-5'>{error}</p>
+
                             <div className='text-center mb-5'>
                                   <button className="rounded-md text-white font-semibold py-[10px] px-[40px] bg-[#2193b0]">Login</button>
                           </div>
@@ -126,10 +132,8 @@ const Login = () => {
                         <div className='text-center'>
                             <button className='flex items-center justify-center bg-[#f44335] text-white w-full py-[8px] rounded-sm mb-5' onClick={ handleGoogle }><FaGoogle className='mr-3 text-[20px]' />Login With Google</button>
 
-                            <button className='flex items-center justify-center bg-[#080505] text-white w-full py-[8px] rounded-sm' onClick={ handleGithub }><FaGithub className='mr-3 text-[20px]' /> Login With Github</button>
+                            <button className='flex items-center justify-center bg-[#080505] text-white w-full py-[8px] mb-8 lg:0 rounded-sm' onClick={ handleGithub }><FaGithub className='mr-3 text-[20px]' /> Login With Github</button>
                         </div>
-
-                        <p className='text-[16px] text-red-500 font-bold text-center mt-8'>{error}</p>
                 </div>
             </div>
         </div>

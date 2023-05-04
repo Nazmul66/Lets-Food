@@ -23,7 +23,7 @@ const Header = () => {
    }
     return (
         <header className='py-6 bg-[#FFF9EA] px-5 lg:px-0'>
-           <div className='flex items-center justify-between max-w-[1140px] mx-auto'>
+           <div className='flex items-center justify-between max-w-[1140px] mx-auto relative'>
                <div className='flex items-center logo w-[20%]'>
                   <h2>Let’sFood</h2>
                   <img src={logo} alt="" className='mt-[-12px]' />

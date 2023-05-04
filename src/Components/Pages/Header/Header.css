@@ -1,5 +1,10 @@
 header{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 .logo h2{
     font-weight: 600;

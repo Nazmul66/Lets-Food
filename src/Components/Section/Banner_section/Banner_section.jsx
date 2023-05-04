@@ -4,7 +4,7 @@ import bannerImg from '../../../assets/banner-img.png'
 
 const Banner_section = () => {
     return (
-        <section className='bg-[#FFF9EA] lg:py-5 p-7'>
+        <section className='bg-[#FFF9EA] lg:pt-28 pt-32 lg:pb-14 pb-16  p-7'>
             <div className='main-container flex flex-col lg:flex-row justify-between items-center lg:gap-8 max-w-[1140px] mx-auto'>
                 <div className='banner-content lg:w-1/2 w-full'>
                     <h2>The  best tasty italian <span style={{ color: "#FFCB45" }}>Food </span>you ever taste.</h2>
@@ -13,7 +13,7 @@ const Banner_section = () => {
                 </div>
 
                 <div className='lg:w-1/2 w-full'>
-                    <img src={bannerImg} alt="" className='w-[90%] lg:w-full block mx-auto ' />
+                    <img src={bannerImg} alt="" className='lg:w-[90%] w-full block mx-auto ' />
                 </div>
             </div>
         </section>

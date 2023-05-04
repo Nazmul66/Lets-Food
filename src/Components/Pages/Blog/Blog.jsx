@@ -8,8 +8,8 @@ const ref = React.createRef();
 const Blog = () => {
     return (
         <div className='blog'>
-            <div className='flex lg:flex-row flex-col-reverse justify-between items-center mb-10 max-w-[650px] mx-auto'>
-                  <h1 className='text-5xl font-semibold text-[#786fa6] lg:mt-0 mt-7 underline-offset-2 underline italic' >Blog Page</h1>
+            <div className='flex lg:flex-row flex-col justify-between items-center mb-10 max-w-[650px] mx-auto'>
+                  <h1 className='text-5xl font-semibold text-[#786fa6] lg:mb-0 mb-9 underline-offset-2 underline italic' >Blog Page</h1>
                   <div className='flex justify-center items-center btn-download lg:mt-3 mt-0'>
                      <FiDownload />
                      <Pdf targetRef={ref} filename="Blog Page Content.pdf">

@@ -3,6 +3,7 @@ import { UserCircleIcon } from '@heroicons/react/24/solid'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import './Registration.css'
 
 const Registration = () => {
     const navigate = useNavigate();
@@ -62,7 +63,7 @@ const Registration = () => {
      }
 
     return (
-        <div className='lg:py-20 py-10 lg:px-0 px-6 bg-[#fff9ea]'>
+        <div className='registration bg-[#fff9ea]'>
             <div className="main-container max-w-[500px] mx-auto">
               <div className="lg:p-11 p-5 border-[2px] rounded-lg border-[#0794c9] bg-white">
                     <form action="" onSubmit={handleRegister}>
@@ -79,19 +80,20 @@ const Registration = () => {
                                 <label htmlFor="" className='font-semibold text-[20px] mb-2 block text-[#0794c9]'>Password</label>
                                 <input type="password" name="password" placeholder='Enter Your Password' className='block w-full outline-none border-[2px] border-[#0794c9] py-2 rounded-lg px-4 text-[16px] font-semibold bg-[#f2f2f2] text-[#0794c9]'   />
                             </div>
-                            <div className='mb-10'>
+                            <div className='mb-5'>
                                 <label htmlFor="" className='font-semibold text-[20px] mb-2 block text-[#0794c9]'>Photo Url</label>
                                 <input type="text" name="photo_url" placeholder='Enter Your Photo Url' className='block w-full outline-none border-[2px] border-[#0794c9] py-2 rounded-lg px-4 text-[16px] font-semibold bg-[#f2f2f2] text-[#0794c9]'   />
                             </div>
-                            <div className='text-center mb-8'>
+                               
+                            <p className='text-[16px] text-red-500 font-bold text-center'>{error}</p>
+
+                            <div className='text-center mb-7 mt-7'>
                                     <button className="rounded-md text-white font-semibold py-[12px] px-[40px] bg-[#2193b0]">Register</button>
                             </div>
 
                             <div className='mb-5'>
                                 <p className='font-semibold text-[#0794c9] text-[16px] text-center'>If you have an account? please <Link to="/login" className='underline text-[#F99B7D]'>Login</Link></p>
                             </div>
-
-                            <p className='text-[16px] text-red-500 font-bold text-center'>{error}</p>
                   </form>
                 </div>
             </div>

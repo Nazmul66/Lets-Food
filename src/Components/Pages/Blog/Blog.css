@@ -1,7 +1,6 @@
 .blog{
-    padding: 50px 0;
+    padding: 170px 0 5px;
     background-color: #FFF9EA;
-    /* background-color: rgba(0, 255, 255, 0.219); */
 }
 .containers{
     max-width: 650px;
@@ -36,7 +35,7 @@
 
 @media (min-width: 320px) and (max-width: 576px){
     .blog{
-        padding: 50px 25px;
+        padding: 140px 25px 0;
         background-color: #FFF9EA;
     } 
 }

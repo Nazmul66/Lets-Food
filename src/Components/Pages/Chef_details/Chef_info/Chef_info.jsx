@@ -9,7 +9,7 @@ const Chef_info = () => {
     const { chefPictureUrl, chefName, description, likes, Numbers_of_recipes, Years_of_experience, recipes} = data;
     
     return (
-        <div className='py-20'>
+        <div className='lg:pt-40 lg:pb-20 pb-20'>
             <h2 className='text-center lg:text-[40px] text-[32px] text-[#495c0e] font-bold mb-20 underline underline-[4px]'>Chef's Information Details</h2>
             <div className='chef-container lg:px-0 px-5'>
                 <div className='w-full border-[1px] border-[#919699] lg:px-8 px-5 py-10 rounded-lg'>
