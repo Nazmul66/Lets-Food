@@ -8,11 +8,11 @@ const Login = () => {
     const { signInUser, googleSignIn, githubSignIn, passwordReset} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     const emailRef = useRef();
     const [error, setError] = useState("");
 
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/"
 
     // manual login auth
     const handleLogin = (event) =>{
@@ -25,8 +25,8 @@ const Login = () => {
          .then((result) =>{
             const AllUser = result.user;
             console.log(AllUser);
-            navigate(from, { replace : true })
             event.target.reset();
+            navigate(from, { replace : true })
          })
          .catch(error =>{
             setError(error.message)
@@ -34,7 +34,7 @@ const Login = () => {
          })
      }
 
-     // reset auth
+     // reset auth provider
      const handleReset = (event) =>{
         const email = emailRef.current.value;
 
@@ -58,7 +58,7 @@ const Login = () => {
         .then(result =>{
             const googleUser = result.user;
             console.log(googleUser)
-            navigate("/")
+            navigate(from, { replace : true })
         })
         .catch(error =>{
             setError(error.message)
@@ -71,7 +71,7 @@ const Login = () => {
         .then(result =>{
             const githubUser = result.user;
             console.log(githubUser);
-            navigate("/")
+            navigate(from, { replace : true })
         })
         .catch(error =>{
             console.log(error.message)
