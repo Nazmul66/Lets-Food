@@ -6,7 +6,7 @@ const Service_section = () => {
     const [data, setData] = useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:4000/service")
+        fetch("https://let-s-food-website-server-nazmul66.vercel.app/service")
         .then(res => res.json())
         .then(del => setData(del))
     }, [])

@@ -15,7 +15,7 @@ const Chef_section = () => {
     const [dataLoad, setDataLoad] = useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:4000/cheff")
+        fetch("https://let-s-food-website-server-nazmul66.vercel.app/cheff")
         .then(res => res.json())
         .then(data => setDataLoad(data))
     },[])
