@@ -2,14 +2,15 @@ import React from 'react';
 import "./Chef_card.css"
 import { AiOutlineLike } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 
 const Chef_card = ({ chef }) => {
     const { id, chefPictureUrl, chefName, Years_of_experience , Numbers_of_recipes, likes } = chef;
     return (
         <div className='px-5 py-8 card'>
-                <div className='w-full h-[200px] overflow-hidden mb-5'>
+                <LazyLoad className='w-full h-[200px] overflow-hidden mb-5'>
                    <img src={chefPictureUrl} alt="" className='chef_img rounded-lg scale-[1] w-full hover:scale-[1.5] ease-in-out duration-300' />
-                </div>
+                </LazyLoad >
                 <h2 className='font-bold text-[#495c0e] text-2xl mb-3'>{chefName}</h2>
                 <h4 className='font-semibold text-[#0d0d0d] text-md mb-5'>Years of experience: {Years_of_experience} </h4>
                   <div className='flex justify-between items-center'>

@@ -43,7 +43,7 @@ const Header = () => {
 
                      <div className='flex lg:flex-row flex-col items-center'>
                         {
-                           userInfo  ?  <><img title={userInfo.email} src={userInfo.photoURL} alt="" className='img_nav mr-4 block w-16 rounded-full cursor-pointer' /></> :  <><img src={user} alt="" className='img_nav mr-4 block' /></>
+                           userInfo  ?  <><img title={userInfo.displayName} src={userInfo.photoURL} alt="" className='img_nav mr-4 block w-16 rounded-full cursor-pointer' /></> :  <><img src={user} alt="" className='img_nav mr-4 block' /></>
                         }
                         {
                            userInfo ?  <button className='btn-login flex items-center' onClick={ handleLogOut }><BiLogIn className='w-[20px] h-[20px] mr-3' /> LogOut</button>  :  <><Link to="/login" ><button className='btn-login flex items-center'><BiLogIn className='w-[20px] h-[20px] mr-3' />Login</button> </Link></>

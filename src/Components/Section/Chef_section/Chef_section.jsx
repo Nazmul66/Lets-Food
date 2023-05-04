@@ -6,14 +6,12 @@ import Loader from '../../../Loader';
 
 const Chef_section = () => {
     const navigation = useNavigation();
-    console.log(navigation.state)
 
     if(navigation.state === "loading"){
         return <Loader></Loader>
     }
 
     const [dataLoad, setDataLoad] = useState([]);
-
     useEffect(() =>{
         fetch("https://let-s-food-website-server-nazmul66.vercel.app/cheff")
         .then(res => res.json())

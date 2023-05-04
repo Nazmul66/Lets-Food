@@ -13,7 +13,7 @@ const Banner_section = () => {
                 </div>
 
                 <div className='lg:w-1/2 w-full'>
-                    <img src={bannerImg} alt="" className='w-3/4 block mx-auto' />
+                    <img src={bannerImg} alt="" className='w-[90%] lg:w-full block mx-auto ' />
                 </div>
             </div>
         </section>
