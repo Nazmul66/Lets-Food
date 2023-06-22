@@ -88,7 +88,7 @@ const Registration = () => {
                             <p className='text-[16px] text-red-500 font-bold text-center'>{error}</p>
 
                             <div className='text-center mb-7 mt-7'>
-                                    <button className="rounded-md text-white font-semibold py-[12px] px-[40px] bg-[#2193b0]">Register</button>
+                                <button className="rounded-md text-white font-semibold py-[12px] px-[40px] bg-[#2193b0]">Register</button>
                             </div>
 
                             <div className='mb-5'>
